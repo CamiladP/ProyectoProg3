@@ -1,15 +1,18 @@
 import React from 'react';
-import Header from './components/Header'
+import Header from './components/Header/Header'
+import Categories from './components/Categories/Categories'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
     return (
-   
-      <div id="wrapper">
-        <Header />
-        
+   <React.Fragment>
        
-      </div>
+        <Header/>
+        <Categories/>
+        <Footer/>
+
+    </React.Fragment>
    
     );
   }
