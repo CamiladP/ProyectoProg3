@@ -25,7 +25,7 @@ render(){
         <button type="button">Cargar más tarjetas</button>
         <section className="card-container">
          
-        <Category/>
+   {this.state.listaPeliculas.map((pelicula,idx)=><Category pelicula={pelicula} key={idx}/>)}
            
         </section>
     </main>)

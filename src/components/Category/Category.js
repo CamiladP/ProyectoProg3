@@ -1,10 +1,11 @@
 import React , {Component} from "react"
 
 
+
 class Category extends Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {}
     }
 render(){
@@ -18,14 +19,14 @@ return( <article>
     </section>
     <main>
         <img src="./img/image-default.png" alt=""/>
-        <h3>Título/ Nombre</h3>
-        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-            perspiciatis! Sint, laboriosam cum.</p>
+        <h3>{this.props.pelicula.title}</h3>
+        <h4>Description:</h4>
+        <p className="description">{this.props.pelicula.overview}</p>
+        
         <section className="aditional-info">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+            <p>Release Date: {this.props.pelicula.release_date}</p>
+            <p>Popularity: {this.props.pelicula.popularity}</p>
+            <p></p>
         </section>
         <a href="">Ver más</a>
     </main>
@@ -34,5 +35,5 @@ return( <article>
 }
 }
 
-export default Category
+export default Category;
 
