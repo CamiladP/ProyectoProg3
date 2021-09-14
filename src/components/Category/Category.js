@@ -8,7 +8,6 @@ class Category extends Component {
         this.state = {
             viewMore: false,
             text: 'Ver más',
-            selected: false,
         }
         console.log(this.state);
     } 
@@ -18,13 +17,11 @@ class Category extends Component {
         this.setState ({
             viewMore: false,
             text: 'Ver más',
-            selected: true, 
             })
         } else {
             this.setState({
                 viewMore: true,
                 text: 'Ver menos',
-                selected: false, 
                 })
             }
         }
@@ -41,7 +38,7 @@ class Category extends Component {
             <i className="fas fa-chevron-left"></i>
             <i className="fas fa-chevron-right"></i>
         </div>
-        <i className="far fa-window-close"></i>
+        <i className="far fa-window-close" onClick={()=> this.props.borrar(this.props.pelicula.id)}></i>
     </section>
     <main>
         <img src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.poster_path}`}alt=""/>

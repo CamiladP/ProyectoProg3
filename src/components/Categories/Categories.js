@@ -20,12 +20,19 @@ class Categories extends Component {
             })
         })
     }
+
+    borrar(borradas) { 
+        let listaFiltrada = this.state.listaPeliculas.filter((pelicula)=> pelicula.id !== borradas)
+        this.setState({
+            listaPeliculas:listaFiltrada
+        })
+    }
 render(){
     return(<main>
         <button type="button">Cargar más tarjetas</button>
         <section className="card-container">
          
-   {this.state.listaPeliculas.map((pelicula,idx)=><Category pelicula={pelicula} key={idx}/>)}
+   {this.state.listaPeliculas.map((pelicula,idx)=><Category pelicula={pelicula} key={idx} borrar={(borradas)=>this.borrar(borradas)}/>)} 
            
         </section>
     </main>)
