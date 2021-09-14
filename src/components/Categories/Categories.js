@@ -7,7 +7,8 @@ class Categories extends Component {
     constructor(){
         super()
         this.state = {
-            listaPeliculas: []
+            listaPeliculas: [],
+            pagina: 1,
         }
     }
     componentDidMount(){
@@ -16,7 +17,20 @@ class Categories extends Component {
         .then (info => {
             console.log (info)
             this.setState({
-                listaPeliculas: info.results
+                listaPeliculas: info.results,
+                pagina: 2,
+            })
+        })
+    }
+   
+    masTarjetas(){
+        fetch("https://api.themoviedb.org/3/movie/popular?api_key=c420f9303ae87dbc0f53e1b840eeb019&language=en-US&page="+this.state.pagina)// aca busco la info
+        .then((response) => response.json()) // arrow function
+        .then (info => {
+            console.log (info)
+            this.setState({
+                listaPeliculas: this.state.listaPeliculas.concat(info.results),
+                pagina: this.state.pagina +1, 
             })
         })
     }
@@ -29,7 +43,7 @@ class Categories extends Component {
     }
 render(){
     return(<main>
-        <button type="button">Cargar más tarjetas</button>
+        <button type="button" onClick={()=> this.masTarjetas()}>Cargar más tarjetas</button>
         <section className="card-container">
          
    {this.state.listaPeliculas.map((pelicula,idx)=><Category pelicula={pelicula} key={idx} borrar={(borradas)=>this.borrar(borradas)}/>)} 
