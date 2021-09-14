@@ -4,17 +4,13 @@ body{
     font-family: 'Poppins', sans-serif;
     height: 100%;
     background-repeat: no-repeat;
+    background-color:black;
 }
 
-h1{
-    color: whitesmoke;
-}
-p{
-    color: whitesmoke;
-}
+
 
 button{
-    background-color: rgb(137, 189, 238); /* Green */
+    background-color: rgb(191, 128, 221); 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -22,4 +18,11 @@ button{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 30px;
 }
+.listaPeliculas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+

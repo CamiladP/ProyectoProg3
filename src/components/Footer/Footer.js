@@ -11,9 +11,9 @@ class Footer extends Component {
     render(){
         return( <footer>
             <ul className="team">
-                <li>Nombre integrante 1</li>
-                <li>Nombre integrante 2</li>
-                <li>Nombre integrante 3</li>
+                <p>Maria Camila de Paul</p>
+                <p>Valentina Socin Casas</p>
+                <p>Macarena Montoya</p>
             </ul>
         </footer>)
     }

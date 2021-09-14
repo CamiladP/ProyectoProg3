@@ -32,7 +32,7 @@ class Category extends Component {
     render() {
         return( 
     <>
-    <article>
+    <article className="tarjeta">
     <section className="navigation">
         <div>
             <i className="fas fa-chevron-left"></i>
@@ -40,8 +40,8 @@ class Category extends Component {
         </div>
         <i className="far fa-window-close" onClick={()=> this.props.borrar(this.props.pelicula.id)}></i>
     </section>
-    <main>
-        <img src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.poster_path}`}alt=""/>
+    <main> 
+        <img className="img" src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.poster_path}`}alt=""/>
         <h3>{this.props.pelicula.title}</h3>
         <h4>Description:</h4>
         <p className="description"></p>
