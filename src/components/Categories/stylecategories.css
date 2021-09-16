@@ -20,7 +20,7 @@ button{
     font-size: 16px;
     border-radius: 30px;
 }
-.listaPeliculas{
+.pelicula {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
