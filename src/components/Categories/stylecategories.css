@@ -26,4 +26,6 @@ button{
     width: 100%;
 
 }
-
+.cargartarjeta {
+    display: flex;
+}
