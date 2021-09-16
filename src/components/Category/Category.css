@@ -7,7 +7,7 @@
 
 }
 .tarjeta{
-    width: 24%;
+    width: 30%;
     border-radius: 10px;
     border-color: black;
     text-align: center;
@@ -21,15 +21,13 @@
 
 }
 .img{
-    width: 100%;
-    
-
+    width: 100%
 }
 p{
     color: black;
     font-family: helvetica;
     font-weight: bold;
     text-align: center;
- 
+   
 
 }

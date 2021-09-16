@@ -19,7 +19,7 @@ button{
     border-radius: 30px;
     border-radius: 30px;
 }
-.listaPeliculas{
+.card-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
