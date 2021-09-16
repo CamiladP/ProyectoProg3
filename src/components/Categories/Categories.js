@@ -43,12 +43,15 @@ class Categories extends Component {
     }
 render(){
     return(<main>
-        <button type="button" onClick={()=> this.masTarjetas()}>Cargar más tarjetas</button>
+        
         <section className="card-container">
-         
+        
    {this.state.listaPeliculas.map((pelicula,idx)=><Category pelicula={pelicula} key={idx} borrar={(borradas)=>this.borrar(borradas)}/>)} 
-           
+ 
         </section>
+
+        <button className= "cargartarjeta" type="button" onClick={()=> this.masTarjetas()}>Cargar más tarjetas</button>
+
     </main>)
     
 }
