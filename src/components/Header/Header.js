@@ -6,7 +6,6 @@ function Header(){
                 <header>
         <h1>Plus+</h1>
         <section>
-            <p>Ordenar ASC/ DESC</p>
             <i className="fas fa-th"></i>
             <i className="fas fa-align-justify"></i>
             <form action="">
