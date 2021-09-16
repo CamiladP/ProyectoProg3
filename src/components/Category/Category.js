@@ -33,10 +33,7 @@ class Category extends Component {
         return( 
     <>
     <article className="tarjeta">
-    <section className="navigation">
-        
-        <i className="far fa-window-close" onClick={()=> this.props.borrar(this.props.pelicula.id)}></i>
-    </section>
+   
     <main> 
         <img className="img" src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.poster_path}`}alt=""/>
         <h3>{this.props.pelicula.title}</h3>
@@ -50,6 +47,10 @@ class Category extends Component {
         </section>
         <p className = {`extra ${this.state.viewMore ? 'show' : 'hide' } `} > {this.props.pelicula.overview} </p>
         <p className= 'Vermas' onClick={()=> this.viewMore()}> {this.state.text} </p>
+        <section className="navigation">
+        
+        <i className="delete" onClick={()=> this.props.borrar(this.props.pelicula.id)}>Eliminar</i>
+    </section>
     </main>
     </article>
     </>

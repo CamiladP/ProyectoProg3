@@ -1,5 +1,5 @@
 import React , {Component} from "react"
-
+import "./footer.css"
 
 class Footer extends Component {
 
@@ -11,9 +11,8 @@ class Footer extends Component {
     render(){
         return( <footer>
             <ul className="team">
-                <p>Maria Camila de Paul</p>
-                <p>Valentina Socin Casas</p>
-                <p>Macarena Montoya</p>
+                <p className="nombres">Maria Camila de Paul - Macarena Montoya - Valentina Socin Casas</p>
+                
             </ul>
         </footer>)
     }
