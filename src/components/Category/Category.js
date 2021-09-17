@@ -32,6 +32,7 @@ class Category extends Component {
     render() {
         return( 
     <>
+ 
     <article className="tarjeta">
    
     <main> 
@@ -39,20 +40,18 @@ class Category extends Component {
         <h3>{this.props.pelicula.title}</h3>
         <h4>Description:</h4>
         <p className="description"></p>
-        
         <section className="aditional-info">
             <p>Release Date: {this.props.pelicula.release_date}</p>
-            <p>Popularity: {this.props.pelicula.popularity}</p>
-            
+            <p>Popularity: {this.props.pelicula.popularity}</p>   
         </section>
         <p className = {`extra ${this.state.viewMore ? 'show' : 'hide' } `} > {this.props.pelicula.overview} </p>
         <p className= 'Vermas' onClick={()=> this.viewMore()}> {this.state.text} </p>
         <section className="navigation">
-        
         <i className="delete" onClick={()=> this.props.borrar(this.props.pelicula.id)}>Eliminar</i>
-    </section>
+        </section>
     </main>
-    </article>
+    </article> 
+
     </>
         );
     }

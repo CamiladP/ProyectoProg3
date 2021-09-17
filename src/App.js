@@ -7,9 +7,9 @@ import Footer from './components/Footer/Footer'
 
 function App() { //armamos la función para poder traer todos juntos los componentes (para traer a todos de una uso React.Fragment)
     return ( 
+
    <React.Fragment> 
-       
-       
+     
         <Categories/> 
         <Footer/>
 

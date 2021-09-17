@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
 import "./header.css"
+
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = { input:'' }
+        this.state = { 
+            input:'' }
     }
+
+/* Logica del cambio de estado
+
+changeOrder(){
+    if(this.state.changeOrder){
+        this.setState ({
+            changeOrder : false
+            })
+        } else {
+            this.setState({
+                changeOrder: true,
+        })
+            }
+        }
+*/
+
     evitarDefault(evento){
         evento.preventDefault()
 
@@ -21,7 +39,10 @@ class Header extends Component {
                 <i className="fas fa-align-justify"></i>
                 <form action=""onSubmit= {(evento)=>this.evitarDefault(evento)}>
                     <input className="buscador" type="text" name="search" id="" placeholder="Search" onChange={(evento)=>this.getInput(evento)} value={this.state.input}/>
-                    <button type="submit"><i className="fas fa-search"></i></button>
+                    <button type="changeOrder"  onClick= {()=> this.props.changeOrder()}  ><i class="fas fa-align-justify"></i></button>
+                 
+                 
+                   
                 </form>
             </section>
         </header> );

@@ -9,7 +9,7 @@ class Categories extends Component {
     this.state = {
       listaPeliculas: [],
       pagina: 1,
-      peliculasIniciales:[]
+      peliculasIniciales:[],
     };
   }
   componentDidMount() {
@@ -59,13 +59,14 @@ class Categories extends Component {
     });
   }
 
+
   render() {
     // if ternario a continuacion
 
     return (
       // abro una etiqueta invisible --> React Fragment
       <React.Fragment>
-        <Header buscar={(input) => this.buscarPelicula(input)}/>
+        <Header buscar={(input) => this.buscarPelicula(input)} />
         <main>
           {this.state.listaPeliculas.length !== 0 ? (
             <section className="card-container">
