@@ -22,7 +22,7 @@ class Header extends Component {
             <section>
                 <form action=""onSubmit= {(evento)=>this.evitarDefault(evento)}>
                     <input className="buscador" type="text" name="search" id="" placeholder="Search" onChange={(evento)=>this.getInput(evento)} value={this.state.input}/>
-                    <button type="changeOrder"  onClick= {()=> this.props.changeOrder()}  >{!this.props.order?(<i class="fas fa-th"></i>):(<i class="fas fa-align-justify"></i>)}</button>
+                    <button type="changeOrder"  onClick= {()=> this.props.changeOrder()}  >{!this.props.order?(<i class= "fas fa-align-justify"></i>):(<i class="fas fa-th"></i>)}</button>
                  
                  
                    
