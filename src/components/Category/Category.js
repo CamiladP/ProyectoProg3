@@ -33,9 +33,9 @@ class Category extends Component {
         return( 
     <>
  
-    <article className="tarjeta">
+    <article className={`${this.props.order?"":"tarjeta"}`}>
    
-    <main> 
+    <main className= {`${this.props.order?"tarjetaLarge":""}`}> 
         <img className="img" src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.poster_path}`}alt=""/>
         <h3>{this.props.pelicula.title}</h3>
         <h4>Description:</h4>

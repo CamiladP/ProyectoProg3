@@ -10,6 +10,7 @@ class Categories extends Component {
       listaPeliculas: [],
       pagina: 1,
       peliculasIniciales:[],
+      changeOrder: false,
     };
   }
   componentDidMount() {
@@ -60,13 +61,25 @@ class Categories extends Component {
   }
 
 
+changeOrder(){
+    if(this.state.changeOrder){
+        this.setState ({
+            changeOrder : false
+            },()=> console.log(this.state.changeOrder))
+        } else {
+            this.setState({
+                changeOrder: true,
+        },()=> console.log(this.state.changeOrder))
+            }
+        }
+
   render() {
     // if ternario a continuacion
 
     return (
       // abro una etiqueta invisible --> React Fragment
       <React.Fragment>
-        <Header buscar={(input) => this.buscarPelicula(input)} />
+        <Header buscar={(input) => this.buscarPelicula(input)} changeOrder={() => this.changeOrder()} order= {this.state.changeOrder}/>
         <main>
           {this.state.listaPeliculas.length !== 0 ? (
             <section className="card-container">
@@ -75,6 +88,7 @@ class Categories extends Component {
                   pelicula={pelicula}
                   key={idx}
                   borrar={(borradas) => this.borrar(borradas)}
+                  order= {this.state.changeOrder} 
                 />
               ))}
             </section>

@@ -8,21 +8,6 @@ class Header extends Component {
             input:'' }
     }
 
-/* Logica del cambio de estado
-
-changeOrder(){
-    if(this.state.changeOrder){
-        this.setState ({
-            changeOrder : false
-            })
-        } else {
-            this.setState({
-                changeOrder: true,
-        })
-            }
-        }
-*/
-
     evitarDefault(evento){
         evento.preventDefault()
 
@@ -35,11 +20,9 @@ changeOrder(){
         return (  <header>
             <h1>Plus+</h1>
             <section>
-                <i className="fas fa-th"></i>
-                <i className="fas fa-align-justify"></i>
                 <form action=""onSubmit= {(evento)=>this.evitarDefault(evento)}>
                     <input className="buscador" type="text" name="search" id="" placeholder="Search" onChange={(evento)=>this.getInput(evento)} value={this.state.input}/>
-                    <button type="changeOrder"  onClick= {()=> this.props.changeOrder()}  ><i class="fas fa-align-justify"></i></button>
+                    <button type="changeOrder"  onClick= {()=> this.props.changeOrder()}  >{!this.props.order?(<i class="fas fa-th"></i>):(<i class="fas fa-align-justify"></i>)}</button>
                  
                  
                    
