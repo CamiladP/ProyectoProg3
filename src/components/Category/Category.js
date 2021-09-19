@@ -37,9 +37,10 @@ class Category extends Component {
    
     <main className= {`${this.props.order?"tarjetaLarge":""}`}> 
         <img className="img" src={`https://image.tmdb.org/t/p/w500/${this.props.pelicula.poster_path}`}alt=""/>
-        <h3>{this.props.pelicula.title}</h3>
+        <h3 className="titulo">{this.props.pelicula.title}</h3>
         <h4>Description:</h4>
         <p className="description"></p>
+        
         <section className="aditional-info">
             <p>Release Date: {this.props.pelicula.release_date}</p>
             <p>Popularity: {this.props.pelicula.popularity}</p>   
