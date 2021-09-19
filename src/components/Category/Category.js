@@ -13,7 +13,7 @@ class Category extends Component {
     } 
 
     viewMore() {
-        if(this.state.viewMore){
+        if(this.state.viewMore){ //modifico los estados una vez que estan creados
         this.setState ({
             viewMore: false,
             text: 'Ver más',
