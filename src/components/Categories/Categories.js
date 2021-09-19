@@ -19,7 +19,7 @@ class Categories extends Component {
     ) // aca busco la info
       .then((response) => response.json()) // arrow function
       .then((info) => {
-        console.log(info);
+        console.log(info);// actualizamos los estados 
         this.setState({
           listaPeliculas: info.results, // esto podemos mostrarlo en el oral
           pagina: 2,
