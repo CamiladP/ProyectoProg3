@@ -15,7 +15,7 @@ class Category extends Component {
     viewMore() {
         if(this.state.viewMore){ //modifico los estados una vez que estan creados
         this.setState ({
-            viewMore: false,
+            viewMore: false, 
             text: 'Ver más',
             })
         } else {
