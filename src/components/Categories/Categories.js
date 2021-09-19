@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 class Categories extends Component { //clase con las propiedades con un componente
   constructor() {
     super();
-    this.state = {
+    this.state = { 
       listaPeliculas: [],
       pagina: 1,
       peliculasIniciales:[],
@@ -20,7 +20,7 @@ class Categories extends Component { //clase con las propiedades con un componen
       .then((response) => response.json()) // traduzco la informacion
       .then((info) => { //le pido la informacion traducida
         console.log(info);
-        this.setState({ //meto la informacion que quiero que vaya actualizando
+        this.setState({ //actualizando la informacion que esta arriba
           listaPeliculas: info.results, 
           pagina: 2,
           peliculasIniciales: info.results
@@ -77,14 +77,14 @@ changeOrder(){
     // if ternario a continuacion
 
     return (
-      // abro una etiqueta invisible --> React Fragment
+      //  --> React Fragment: para unificar los elementos sin agregar nodos extras al dom
       <React.Fragment>
         <Header buscar={(input) => this.buscarPelicula(input)} changeOrder={() => this.changeOrder()} order= {this.state.changeOrder}/>
         <main>
           {this.state.listaPeliculas.length !== 0 ? (
             <section className="card-container">
-              {this.state.listaPeliculas.map((pelicula, idx) => ( //recorrer una lista y devolver algo
-                <Category
+              {this.state.listaPeliculas.map((pelicula, idx) => ( //por cada elemento de la lista mostra una category
+                <Category // lo que le mando a category
                   pelicula={pelicula} 
                   key={idx}
                   borrar={(borradas) => this.borrar(borradas)}

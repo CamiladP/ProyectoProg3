@@ -3,7 +3,7 @@ import "./Category.css"
 
 class Category extends Component {
 
-    constructor(props){
+    constructor(props){ //la informacion que te mandan se guarda en props
         super(props)
         this.state = {
             viewMore: false,
@@ -43,7 +43,7 @@ class Category extends Component {
         
         <section className="aditional-info">
             <p>Release Date: {this.props.pelicula.release_date}</p>
-            <p>Popularity: {this.props.pelicula.popularity}</p>   
+            <p>Popularity: {this.props.pelicula.popularity}</p>  
         </section>
         <p className = {`extra ${this.state.viewMore ? 'show' : 'hide' } `} > {this.props.pelicula.overview} </p>
         <p className= 'Vermas' onClick={()=> this.viewMore()}> {this.state.text} </p>
