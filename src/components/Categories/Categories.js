@@ -3,7 +3,7 @@ import Category from "../Category/Category";
 import "../Categories/stylecategories.css";
 import Header from "../Header/Header";
 
-class Categories extends Component {
+class Categories extends Component { //clase con las propiedades con un componente
   constructor() {
     super();
     this.state = {
@@ -13,15 +13,15 @@ class Categories extends Component {
       changeOrder: false,
     };
   }
-  componentDidMount() {
+  componentDidMount() { // se ejecuta al instante que se renderiza
     fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=c420f9303ae87dbc0f53e1b840eeb019&language=en-US&page=1"
     ) // aca busco la info
-      .then((response) => response.json()) // arrow function
-      .then((info) => {
-        console.log(info);// actualizamos los estados 
-        this.setState({
-          listaPeliculas: info.results, // esto podemos mostrarlo en el oral
+      .then((response) => response.json()) // traduzco la informacion
+      .then((info) => { //le pido la informacion traducida
+        console.log(info);
+        this.setState({ //meto la informacion que quiero que vaya actualizando
+          listaPeliculas: info.results, 
           pagina: 2,
           peliculasIniciales: info.results
         });
@@ -33,7 +33,7 @@ class Categories extends Component {
       "https://api.themoviedb.org/3/movie/popular?api_key=c420f9303ae87dbc0f53e1b840eeb019&language=en-US&page=" +
         this.state.pagina
     ) // aca busco la info
-      .then((response) => response.json()) // arrow function
+      .then((response) => response.json()) 
       .then((info) => {
         console.log(info);
         this.setState({
@@ -83,9 +83,9 @@ changeOrder(){
         <main>
           {this.state.listaPeliculas.length !== 0 ? (
             <section className="card-container">
-              {this.state.listaPeliculas.map((pelicula, idx) => (
+              {this.state.listaPeliculas.map((pelicula, idx) => ( //recorrer una lista y devolver algo
                 <Category
-                  pelicula={pelicula}
+                  pelicula={pelicula} 
                   key={idx}
                   borrar={(borradas) => this.borrar(borradas)}
                   order= {this.state.changeOrder} 
