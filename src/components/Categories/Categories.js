@@ -83,7 +83,7 @@ changeOrder(){
         <main>
           {this.state.listaPeliculas.length !== 0 ? (
             <section className="card-container">
-              {this.state.listaPeliculas.map((pelicula, idx) => ( //por cada elemento de la lista mostra una category
+              {this.state.listaPeliculas.map((pelicula, idx) => ( //recorro listapeliculas y por cada una de estas peliculas se arma un componente category
                 <Category // lo que le mando a category
                   pelicula={pelicula} 
                   key={idx}
