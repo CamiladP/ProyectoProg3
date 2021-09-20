@@ -20,7 +20,7 @@ class Categories extends Component { //clase con las propiedades con un componen
       .then((response) => response.json()) // traduzco la informacion
       .then((info) => { //le pido la informacion traducida
         console.log(info);
-        this.setState({ //actualizando la informacion que esta arriba
+        this.setState({ 
           listaPeliculas: info.results, 
           pagina: 2,
           peliculasIniciales: info.results

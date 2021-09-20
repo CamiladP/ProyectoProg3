@@ -45,7 +45,7 @@ class Category extends Component {
             <p>Release Date: {this.props.pelicula.release_date}</p>
             <p>Popularity: {this.props.pelicula.popularity}</p>  
         </section>
-        <p className = {`extra ${this.state.viewMore ? 'show' : 'hide' } `} > {this.props.pelicula.overview} </p>
+        <p className = {`extra ${this.state.viewMore ? 'show' : 'hide' } `} > {this.props.pelicula.overview} </p> 
         <p className= 'Vermas' onClick={()=> this.viewMore()}> {this.state.text} </p>
         <section className="navigation">
         <i className="delete" onClick={()=> this.props.borrar(this.props.pelicula.id)}>Eliminar</i>
